@@ -4,15 +4,23 @@ import hashlib
 import datetime
 import platform
 
+# Clear screen
 os.system("clear")
 
+# ================= Logo + Developer Info First =================
 print("\033[1;32m")
 print("=================================")
-print("      ARAFAT TERMUX TOOL")
-print(" Developer : Arafat")
-print(" GitHub : https://github.com/576890-art")
+print("        ARAFAT TERMUX TOOL")
 print("=================================")
+print("Developer : Arafat")
+print("GitHub    : https://github.com/576890-art")
+print("Facebook  : https://www.facebook.com/arafat576890")
+print("WhatsApp  : 01989333156")
+print("Telegram  : https://t.me/arafat_tech")
+print("Email     : arafat342422@gmail.com")
+print("=================================\n")
 
+# ================= Main Menu Loop =================
 while True:
     print("""
 1  Password Generator
@@ -66,70 +74,56 @@ while True:
 49 Restart Tool
 50 Exit
 """)
-
     choice=input("Select option : ")
 
     if choice=="1":
         chars="abcdefghijklmnopqrstuvwxyz123456789"
-        p="".join(random.choice(chars) for i in range(10))
-        print("Password:",p)
+        print("Password:", "".join(random.choice(chars) for i in range(10)))
 
     elif choice=="2":
         print("\nStarting Termux Auto Install...\n")
         os.system("pkg update -y && pkg upgrade -y")
-        os.system("pkg install python -y")
-        os.system("pkg install python2 -y")
-        os.system("pkg install git -y")
-        os.system("pkg install wget -y")
-        os.system("pkg install nano -y")
-        os.system("pkg install curl -y")
-        os.system("pkg install figlet -y")
-        os.system("pkg install lolcat -y")
+        os.system("pkg install python -y python2 git wget nano curl figlet lolcat -y")
         print("\nAll packages installed successfully!\n")
 
     elif choice=="3":
-        name=random.choice(["arafat","coder","dev","tech"])
-        num=random.randint(10,999)
-        print("Username:",name+str(num))
+        print("Username:", random.choice(["arafat","coder","dev","tech"]) + str(random.randint(10,999)))
 
     elif choice=="4":
-        print("Random Number:",random.randint(1,10000))
+        print("Random Number:", random.randint(1,10000))
 
     elif choice=="5":
-        print("OTP:",random.randint(100000,999999))
+        print("OTP:", random.randint(100000,999999))
 
     elif choice=="6":
         text=input("Enter text: ")
-        print("MD5:",hashlib.md5(text.encode()).hexdigest())
+        print("MD5:", hashlib.md5(text.encode()).hexdigest())
 
     elif choice=="7":
         text=input("Enter text: ")
-        print("SHA1:",hashlib.sha1(text.encode()).hexdigest())
+        print("SHA1:", hashlib.sha1(text.encode()).hexdigest())
 
     elif choice=="8":
-        print("Time:",datetime.datetime.now().time())
+        print("Time:", datetime.datetime.now().time())
 
     elif choice=="9":
-        print("Date:",datetime.date.today())
+        print("Date:", datetime.date.today())
 
     elif choice=="10":
         num=int(input("Enter number: "))
-        print("Binary:",bin(num))
+        print("Binary:", bin(num))
 
     elif choice=="11":
-        print(random.choice(["😀","😎","🔥","🚀","💻"]))
+        print("Emoji:", random.choice(["😀","😎","🔥","🚀","💻"]))
 
     elif choice=="12":
-        color="#%06x"%random.randint(0,0xFFFFFF)
-        print(color)
+        print("Color Code:#%06x" % random.randint(0,0xFFFFFF))
 
     elif choice=="13":
-        countries=["USA","UK","Germany","Japan","Canada"]
-        print(random.choice(countries))
+        print("Country:", random.choice(["USA","UK","Germany","Japan","Canada"]))
 
     elif choice=="14":
-        jokes=["Why Python? Because it's easy!","Debugging = removing bugs!","Programmer life = coffee + code"]
-        print(random.choice(jokes))
+        print("Joke:", random.choice(["Why Python? Because it's easy!","Debugging = removing bugs!","Programmer life = coffee + code"]))
 
     elif choice=="15":
         text=input("Enter word: ")
@@ -141,7 +135,7 @@ while True:
 
     elif choice=="17":
         text=input("Enter sentence: ")
-        print("Word Count:",len(text.split()))
+        print("Word Count:", len(text.split()))
 
     elif choice=="18":
         text=input("Enter text: ")
@@ -155,32 +149,29 @@ while True:
         print("Phone Number: 01"+str(random.randint(300000000,999999999)))
 
     elif choice=="21":
-        name=random.choice(["alex","sam","john","rafi","ali"])
-        print("Email:",name+"@gmail.com")
+        print("Email:", random.choice(["alex","sam","john","rafi","ali"])+"@gmail.com")
 
     elif choice=="22":
-        print("Year:",random.randint(1990,2030))
+        print("Year:", random.randint(1990,2030))
 
     elif choice=="23":
-        months=["January","February","March","April","May","June","July","August"]
-        print("Month:",random.choice(months))
+        months=["January","February","March","April","May","June","July","August","September","October","November","December"]
+        print("Month:", random.choice(months))
 
     elif choice=="24":
-        print("Day:",random.randint(1,31))
+        print("Day:", random.randint(1,31))
 
     elif choice=="25":
-        chars="abcdefghijklmnopqrstuvwxyz"
-        print("Random Char:",random.choice(chars))
+        print("Random Character:", random.choice("abcdefghijklmnopqrstuvwxyz"))
 
     elif choice=="26":
-        quotes=["Code is life","Stay focused","Never give up"]
-        print(random.choice(quotes))
+        print("Quote:", random.choice(["Code is life","Stay focused","Never give up"]))
 
     elif choice=="27":
-        print(platform.system(),platform.release())
+        print(platform.system(), platform.release())
 
     elif choice=="28":
-        print("Python Version:",platform.python_version())
+        print("Python Version:", platform.python_version())
 
     elif choice=="29":
         os.system("ls")
@@ -232,34 +223,34 @@ while True:
         os.system("uptime")
 
     elif choice=="41":
-        print("Dice:",random.randint(1,6))
+        print("Dice:", random.randint(1,6))
 
     elif choice=="42":
         print(random.choice(["HEAD","TAIL"]))
 
     elif choice=="43":
-        print("Random Game Number:",random.randint(1,1000))
+        print("Random Game Number:", random.randint(1,1000))
 
     elif choice=="44":
         chars="abcdefghijklmnopqrstuvwxyz123456789"
-        p="".join(random.choice(chars) for i in range(10))
-        print("Random Password Strength Test:",p)
+        print("Random Password Strength Test:", "".join(random.choice(chars) for i in range(10)))
 
     elif choice=="45":
-        name=random.choice(["arafat","coder","dev","tech"])
-        num=random.randint(10,999)
-        print("Random Username:",name+str(num))
+        print("Random Username:", random.choice(["arafat","coder","dev","tech"])+str(random.randint(10,999)))
 
     elif choice=="46":
-        chars="abcdefghijklmnopqrstuvwxyz"
-        print("Random Letter:",random.choice(chars))
+        print("Random Letter:", random.choice("abcdefghijklmnopqrstuvwxyz"))
 
     elif choice=="47":
-        print("Random Digit:",random.randint(0,9))
+        print("Random Digit:", random.randint(0,9))
 
     elif choice=="48":
         print("Developer: Arafat")
         print("GitHub: https://github.com/576890-art")
+        print("Facebook: https://www.facebook.com/arafat576890")
+        print("WhatsApp: 01989333156")
+        print("Telegram: https://t.me/arafat_tech")
+        print("Email: arafat342422@gmail.com")
 
     elif choice=="49":
         os.system("python tool.py")
